@@ -12,9 +12,9 @@
 
     <div class="reply-box form box-block">
 
-      <div class="alert alert-warning">
-          {!! lang('be_nice') !!}
-      </div>
+      {{--<div class="alert alert-warning">--}}
+          {{--{!! lang('be_nice') !!}--}}
+      {{--</div>--}}
 
       @include('layouts.partials.errors')
 
@@ -52,7 +52,7 @@
             <input class="form-control" id="topic-title" placeholder="{{ lang('Please write down a topic') }}" name="title" type="text" value="{{ !isset($topic) ? '' : $topic->title }}">
         </div>
 
-        @include('topics.partials.composing_help_block')
+{{--        @include('topics.partials.composing_help_block')--}}
 
         <div class="form-group">
             <textarea class="form-control" rows="20" style="overflow:hidden" id="reply_content" placeholder="{{ lang('Please using markdown.') }}" name="body" cols="50">{{ !isset($topic) ? '' : $topic->body_original }}</textarea>
@@ -80,6 +80,7 @@
           <li>请传播美好的事物，这里拒绝低俗、诋毁、谩骂等相关信息</li>
           <li>请尽量分享技术相关的话题，谢绝发布社会, 政治等相关新闻</li>
           <li>这里绝对不讨论任何有关盗版软件、音乐、电影如何获得的问题</li>
+        </ul>
       </div>
     </div>
 

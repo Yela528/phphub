@@ -9,11 +9,9 @@
     <div id="top-navbar-collapse" class="navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="{{ (Request::is('topics*') && !Request::is('categories*') ? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
-        <li class="{{ Request::is('categories/6') ? ' active' : '' }}"><a href="{{ route('categories.show', [6, 'filter' => 'recent']) }}">教程</a></li>
-        <li class="{{ Request::is('categories/1') ? ' active' : '' }}"><a href="{{ route('categories.show', 1) }}">{{ lang('Jobs') }}</a></li>
-        <li class="{{ (Request::is('sites') ? ' active' : '') }}"><a href="{{ route('sites.index') }}">{{ lang('Sites') }}</a></li>
-        <li class="{{ (Request::is('wiki') ? ' active' : '') }}"><a href="{{ route('wiki') }}">Wiki</a></li>
-        <li class="nav-docs"><a href="https://laravel-china.org/docs/home" class="no-pjax">文档</a></li>
+        <li class="{{ Request::is('categories/6') ? ' active' : '' }}"><a href="{{ route('categories.show', [6, 'filter' => 'recent']) }}">{{lang('cate_six')}}</a></li>
+        <li class="{{ Request::is('categories/1') ? ' active' : '' }}"><a href="{{ route('categories.show', 1) }}">{{ lang('cate_one') }}</a></li>
+        {{--<li class="{{ (Request::is('sites') ? ' active' : '') }}"><a href="{{ route('sites.index') }}">{{ lang('Sites') }}</a></li>--}}
 
         @if(Auth::check() && Auth::user()->can('access_board'))
             <li class="{{ Request::is('categories/'.config('app.admin_board_cid')) ? ' active' : '' }}"><a href="{{ route('categories.show', config('app.admin_board_cid')) }}">站务</a></li>
@@ -46,7 +44,7 @@
               <li>
                   <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dLabel" >
                       <img class="avatar-topnav" alt="Summer" src="{{ $currentUser->present()->gravatar }}" />
-                       {{{ $currentUser->name }}}
+                       {{ $currentUser->name }}
                        <span class="caret"></span>
                   </a>
 
@@ -79,10 +77,10 @@
               </li>
 
           @else
-              <a href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}" class="btn btn-success login-btn weichat-login-btn">
-                <i class="fa fa-weixin"></i>
-                {{ lang('Login') }}
-              </a>
+              {{--<a href="{{ URL::route('auth.oauth', ['driver' => 'wechat']) }}" class="btn btn-success login-btn weichat-login-btn">--}}
+                {{--<i class="fa fa-weixin"></i>--}}
+                {{--{{ lang('Login') }}--}}
+              {{--</a>--}}
 
               <a href="{{ URL::route('auth.oauth', ['driver' => 'github']) }}" class="btn btn-info login-btn">
                 <i class="fa fa-github-alt"></i>

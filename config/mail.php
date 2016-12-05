@@ -56,7 +56,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', null),
-        'name'    => env('MAIL_FROM_NAME', 'PHPHub'),
+        'name'    => env('MAIL_FROM_NAME', 'g9zz'),
     ],
 
     /*

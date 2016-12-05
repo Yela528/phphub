@@ -20,13 +20,13 @@ ______                            _              _                              
 
 		<meta charset="UTF-8">
 
-		<title>@section('title')Laravel China 社区 - 靠谱的 Laravel 和 PHP 开发者社区@show - Powered by PHPHub</title>
+		<title>@section('title') g9zz网 @show - </title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-		<meta name="keywords" content="php,laravel,php论坛,laravel论坛,php社区,laravel社区,laravel教程,php教程,laravel视频,php开源,php新手,php7,laravel5" />
-		<meta name="author" content="PHPHub" />
-		<meta name="description" content="@section('description') Laravel China 是国内最大的 Laravel 和 PHP 中文社区，致力于推动 Laravel，PHP7、php-fig 等 PHP 新技术，新理念在中国的发展，是国内最靠谱的 PHP 论坛。 @show" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="g9zz" />
+		<meta name="description" content="@section('description')  @show" />
         <meta name="_token" content="{{ csrf_token() }}">
 
         <link rel="stylesheet" href="{{ cdn(elixir('assets/css/styles.css')) }}">
@@ -36,7 +36,7 @@ ______                            _              _                              
         <script>
             Config = {
                 'cdnDomain': '{{ get_cdn_domain() }}',
-                'user_id': {{ $currentUser ? $currentUser->id : 0 }},
+                'user_id': {{ $currentUser 	? $currentUser->id : 0 }},
                 'user_avatar': {!! $currentUser ? '"'.$currentUser->present()->gravatar() . '"' : '""' !!},
                 'user_link': {!! $currentUser ? '"'. route('users.show', $currentUser->id) . '"' : '""' !!},
                 'routes': {
@@ -87,34 +87,34 @@ ______                            _              _                              
 
 	    @yield('scripts')
 
-        @if (App::environment() == 'production')
-		<script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        {{--@if (App::environment() == 'production')--}}
+		{{--<script>--}}
+          {{--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){--}}
+          {{--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),--}}
+          {{--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)--}}
+          {{--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');--}}
 
-          ga('create', '{{ getenv('GA_Tracking_ID') }}', 'auto');
-          ga('send', 'pageview');
-        </script>
+          {{--ga('create', '{{ getenv('GA_Tracking_ID') }}', 'auto');--}}
+          {{--ga('send', 'pageview');--}}
+        {{--</script>--}}
 
 
-		<script>
-		// Baidu link submit
-		(function(){
-		    var bp = document.createElement('script');
-		    var curProtocol = window.location.protocol.split(':')[0];
-		    if (curProtocol === 'https') {
-		        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-		    }
-		    else {
-		        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-		    }
-		    var s = document.getElementsByTagName("script")[0];
-		    s.parentNode.insertBefore(bp, s);
-		})();
-		</script>
-        @endif
+		{{--<script>--}}
+		{{--// Baidu link submit--}}
+		{{--(function(){--}}
+		    {{--var bp = document.createElement('script');--}}
+		    {{--var curProtocol = window.location.protocol.split(':')[0];--}}
+		    {{--if (curProtocol === 'https') {--}}
+		        {{--bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';--}}
+		    {{--}--}}
+		    {{--else {--}}
+		        {{--bp.src = 'http://push.zhanzhang.baidu.com/push.js';--}}
+		    {{--}--}}
+		    {{--var s = document.getElementsByTagName("script")[0];--}}
+		    {{--s.parentNode.insertBefore(bp, s);--}}
+		{{--})();--}}
+		{{--</script>--}}
+        {{--@endif--}}
 
 
 

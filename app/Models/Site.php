@@ -28,20 +28,23 @@ class Site extends Model
             $raw_sites = self::orderBy('order', 'desc')->orderBy('created_at', 'desc')->get();
             $sorted = [];
 
-            $sorted['site'] = $raw_sites->filter(function ($item) {
-                return $item->type == 'site';
+            $sorted['site_search'] = $raw_sites->filter(function ($item) {
+                return $item->type == 'site_search';
+            });
+            $sorted['site_community'] = $raw_sites->filter(function ($item) {
+                return $item->type == 'site_community';
+            });
+            $sorted['dev_technology'] = $raw_sites->filter(function ($item) {
+                return $item->type == 'dev_technology';
+            });
+            $sorted['site_other'] = $raw_sites->filter(function ($item) {
+                return $item->type == 'site_other';
             });
             $sorted['blog'] = $raw_sites->filter(function ($item) {
                 return $item->type == 'blog';
             });
-            $sorted['weibo'] = $raw_sites->filter(function ($item) {
-                return $item->type == 'weibo';
-            });
-            $sorted['dev_service'] = $raw_sites->filter(function ($item) {
-                return $item->type == 'dev_service';
-            });
-            $sorted['site_foreign'] = $raw_sites->filter(function ($item) {
-                return $item->type == 'site_foreign';
+            $sorted['site_shop'] = $raw_sites->filter(function ($item) {
+                return $item->type == 'site_shop';
             });
             return $sorted;
         });

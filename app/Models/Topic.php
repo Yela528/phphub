@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use EstGroupe\Taggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
 use Naux\AutoCorrect;
@@ -15,6 +16,7 @@ class Topic extends Model
 {
     use Traits\TopicFilterable;
     use Traits\TopicApiHelper;
+    use Taggable;
 
     // manually maintian
     public $timestamps = false;

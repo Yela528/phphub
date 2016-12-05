@@ -11,6 +11,7 @@ use Rss;
 use Purifier;
 use Phphub\Handler\EmailHandler;
 use Jrean\UserVerification\Facades\UserVerification;
+use App\Models\Site;
 
 class PagesController extends Controller
 {
@@ -18,7 +19,8 @@ class PagesController extends Controller
     {
         $topics = $topic->getTopicsWithFilter('excellent');
         $banners = Banner::allByPosition();
-        return view('pages.home', compact('topics', 'banners'));
+        $sites = Site::allFromCache();
+        return view('pages.home', compact('topics', 'banners','sites'));
     }
 
     public function about()
@@ -34,7 +36,7 @@ class PagesController extends Controller
     public function search(Request $request)
     {
         $query = Purifier::clean($request->input('q'), 'search_q');
-        return redirect()->away('https://www.google.com/search?q=site:laravel-china.org ' . $query, 301);
+        return redirect()->away('https://www.google.com/search?q=site:g9zz.com ' . $query, 301);
     }
 
     public function feed()

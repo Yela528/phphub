@@ -6,10 +6,7 @@
 
 @section('content')
 
-    <div class="box text-center site-intro rm-link-color">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        欢迎交换友链，只接受 PHP、Laravel 相关话题的站点，请见 <a style="text-decoration: underline;" href="https://laravel-china.org/topics/2453">关于酷站</a>
-    </div>
+
 
     <div class="sites-index">
 
@@ -22,6 +19,7 @@
         @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> 开发者服务推荐', 'filterd_sites' => $sites['dev_service']])
 
         @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> 国外网站', 'filterd_sites' => $sites['site_foreign']])
+        @include('sites.partials.sites', ['heading_title' => '<i class="fa fa-cloud text-md"></i> 国外网站1', 'filterd_sites' => $sites['site_foreign1']])
 
     </div>
 

@@ -71,9 +71,9 @@
     <ul class="list list-group ">
         @foreach($banners['sidebar-resources'] as $banner)
             <li class="list-group-item ">
-                <a href="{{ $banner->link }}" class="popover-with-html no-pjax" data-content="{{{ $banner->title }}}">
+                <a href="{{ $banner->link }}" class="popover-with-html no-pjax" data-content="{{ $banner->title }}">
                     <img class="media-object inline-block " src="{{ $banner->image_url }}">
-                    {{{ $banner->title }}}
+                    {{ $banner->title }}
                 </a>
             </li>
         @endforeach
@@ -81,11 +81,11 @@
   </div>
 </div>
 @endif
-
+{{--名人堂--}}
 @if (Route::currentRouteName() == 'topics.index')
     <div class="panel panel-default corner-radius panel-active-users">
       <div class="panel-heading text-center">
-        <h3 class="panel-title">{{ lang('Active Users') }}（<a href="{{ route('hall_of_fames') }}"><i class="fa fa-star" aria-hidden="true"></i> {{ lang('Hall of Fame') }}</a>）</h3>
+        <h3 class="panel-title">{{ lang('Active Users') }}</h3>
       </div>
       <div class="panel-body">
         @include('topics.partials.active_users')
@@ -116,20 +116,21 @@
   </div>
   </div>
 
-  @if (isset($links) && count($links))
-    <div class="panel panel-default corner-radius">
-      <div class="panel-heading text-center">
-        <h3 class="panel-title">{{ lang('Links') }}</h3>
-      </div>
-      <div class="panel-body text-center" style="padding-top: 5px;">
-        @foreach ($links as $link)
-            <a href="{{ $link->link }}" target="_blank" rel="nofollow" title="{{ $link->title }}" style="padding: 3px;">
-                <img src="{{ $link->cover }}" style="width:150px; margin: 3px 0;">
-            </a>
-        @endforeach
-      </div>
-    </div>
-  @endif
+        {{--这里放友情社区的,暂时不要--}}
+  {{--@if (isset($links) && count($links))--}}
+    {{--<div class="panel panel-default corner-radius">--}}
+      {{--<div class="panel-heading text-center">--}}
+        {{--<h3 class="panel-title">{{ lang('Links') }}</h3>--}}
+      {{--</div>--}}
+      {{--<div class="panel-body text-center" style="padding-top: 5px;">--}}
+        {{--@foreach ($links as $link)--}}
+            {{--<a href="{{ $link->link }}" target="_blank" rel="nofollow" title="{{ $link->title }}" style="padding: 3px;">--}}
+                {{--<img src="{{ $link->cover }}" style="width:150px; margin: 3px 0;">--}}
+            {{--</a>--}}
+        {{--@endforeach--}}
+      {{--</div>--}}
+    {{--</div>--}}
+  {{--@endif--}}
 
 @if (isset($randomExcellentTopics) && count($randomExcellentTopics))
 
@@ -144,34 +145,34 @@
 
 @endif
 
-@if (Route::currentRouteName() == 'topics.index')
+{{--@if (Route::currentRouteName() == 'topics.index')--}}
 
-<div class="panel panel-default corner-radius">
-  <div class="panel-heading text-center">
-    <h3 class="panel-title">{{ lang('App Download') }}</h3>
-  </div>
-  <div class="panel-body text-center" style="padding: 7px;">
-    <a href="https://laravel-china.org/topics/1531" target="_blank" rel="nofollow" title="">
-      <img src="https://dn-phphub.qbox.me/uploads/images/201512/08/1/cziZFHqkm8.png" style="width:240px;">
-    </a>
-  </div>
-</div>
+{{--<div class="panel panel-default corner-radius">--}}
+  {{--<div class="panel-heading text-center">--}}
+    {{--<h3 class="panel-title">{{ lang('App Download') }}</h3>--}}
+  {{--</div>--}}
+  {{--<div class="panel-body text-center" style="padding: 7px;">--}}
+    {{--<a href="https://laravel-china.org/topics/1531" target="_blank" rel="nofollow" title="">--}}
+      {{--<img src="https://dn-phphub.qbox.me/uploads/images/201512/08/1/cziZFHqkm8.png" style="width:240px;">--}}
+    {{--</a>--}}
+  {{--</div>--}}
+{{--</div>--}}
 
-@endif
+{{--@endif--}}
 
 
 <div class="box text-center">
-  <p style="margin-bottom: 10px;margin-top: 10px;">订阅 Laravel 资讯</p>
-  <img class="image-border popover-with-html" data-content="扫码，或者搜索微信订阅号：「Laravel资讯」"
-    src="https://dn-phphub.qbox.me/uploads/images/201609/08/1/43cy0uEmy0.jpg" style="width:80%">
+  <p style="margin-bottom: 10px;margin-top: 10px;">哎哟,这里放啥呢</p>
+  <img class="image-border popover-with-html" data-content=""
+    src="#" style="width:80%">
   <br/><br/>
 </div>
 
 
 <div class="panel panel-default corner-radius" style="color:#a5a5a5">
   <div class="panel-body text-center">
-    ♥ Do what you love, love what you do. <br>
-    by <a href="http://estgroupe.com/"  style="color:#a5a5a5">The EST Group</a>
+    ♥ All you have lost will be back bit by bit as long as you had lost it <br>
+    by <a href="http://estgroupe.com/"  style="color:#a5a5a5">Yela</a>
   </div>
 </div>
 

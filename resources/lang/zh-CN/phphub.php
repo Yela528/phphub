@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'cate_one' => '微博',
+    'cate_six' => '知乎',
     'Topics' => '社区',
     'Wiki' => 'Wiki',
     'Jobs' => '招聘',
@@ -121,14 +123,14 @@ return [
     'Recent Topics' => '最近话题',
     'Reply' => '回复',
     'User Login Required for commenting.' => '需要登录后才能发表评论.',
-    'site_intro' => 'Laravel China 中国最大的 Laravel 和 PHP 开发者社区，Powered By <a class="popover-with-html" data-content="查看源代码" target="_blank" style="padding-right:8px" href="https://github.com/summerblue/phphub5" data-original-title="" title=""><i class="fa fa-github-alt text-md" aria-hidden="true"></i> PHPHub</a>',
+    'site_intro' => '',
     'contributing' => '功能正在完善中, 欢迎 <i class="fa fa-github" style="font-size:15px"></i> <a href="https://github.com/summerblue/phphub5" target="_blank">贡献代码</a> 或 <a href="https://github.com/summerblue/phphub5/issues" target="_blank">提交 Issue</a>.',
     'be_nice' => '我们希望 Laravel China 能够成为拥有浓厚技术氛围的开发者社区，而实现这个目标，需要我们所有人的共同努力：友善，公平，尊重知识和事实。请严格遵守 - <a href="https://laravel-china.org/topics/3022">社区发帖和管理规范</a>',
-    'publish_typography' => '请注意单词拼写，以及中英文排版，<a href="https://github.com/sparanoid/chinese-copywriting-guidelines">参考此页</a>',
-    'publish_markdown' => '支持 Markdown 格式, <strong>**粗体**</strong>、~~删除线~~、<code>`单行代码`</code>, 更多语法请见这里 <a href="https://github.com/riku/Markdown-Syntax-CN/blob/master/syntax.md">Markdown 语法</a>',
-    'publish_at_user' => '@name 会链接到用户页面，并会通知他',
-    'publish_image' => '上传图片, 支持拖拽和剪切板黏贴上传, 格式限制 - jpg, png, gif',
-    'publish_draft' => '发布框支持本地存储功能，会在内容变更时保存，「提交」按钮点击时清空',
+    'publish_typography' => '此处可以放点广告',
+    'publish_markdown' => '此处可以放点广告',
+    'publish_at_user' => '此处可以放点广告',
+    'publish_image' => '此处可以放点广告',
+    'publish_draft' => '此处可以放点广告',
     'Successfully remove attention.' => '成功取消关注',
     'Successfully_attention' => '成功关注主题, 系统会通知你关于此主题最新的讨论.',
     'Operation succeeded.' => '操作成功！',
@@ -151,7 +153,7 @@ return [
     'Recommended' => '推荐',
     'Refresh cache success' => '刷新缓存成功',
 
-    'Sites' => '酷站',
+    'Sites' => '友链',
     'Recommended Sites' => '推荐站点',
 
     'Append' => '附言',

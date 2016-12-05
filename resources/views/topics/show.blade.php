@@ -1,11 +1,11 @@
 @extends('layouts.default')
 
 @section('title')
-{{{ $topic->title }}}_@parent
+{{ $topic->title }}_@parent
 @stop
 
 @section('description')
-{{{ $topic->excerpt }}}
+{{ $topic->excerpt }}
 @stop
 
 @section('content')
@@ -15,7 +15,7 @@
   <div class="topic panel panel-default">
     <div class="infos panel-heading">
 
-      <h1 class="panel-title topic-title">{{{ $topic->title }}}</h1>
+      <h1 class="panel-title topic-title">{{ $topic->title }}</h1>
 
       @include('topics.partials.meta')
     </div>
@@ -107,7 +107,7 @@
 
                 </div>
                 <div class="vote-hint">
-                    成为第一个点赞的人吧 <img title=":bowtie:" alt=":bowtie:" class="emoji" src="https://dn-phphub.qbox.me/assets/images/emoji/bowtie.png" align="absmiddle"></img>
+                    成为第一个点赞的人吧 <img title=":bowtie:" alt=":bowtie:" class="emoji" src="https://dn-phphub.qbox.me/assets/images/emoji/bowtie.png" align="absmiddle">
                 </div>
             @endif
 
@@ -194,7 +194,7 @@
     $(document).ready(function()
     {
         var $config = {
-            title               : '{{{ $topic->title }}} from PHPHub - PHP，Laravel的中文社区 #laravel# @phphub {{ $topic->user->id != 1 ? '@李桂龙_CJ' : '' }} {{{ $topic->user->weibo_name ? '@'.$topic->user->weibo_name : '' }}}',
+            title               : '{{ $topic->title }} @叶落山城秋 {{ $topic->user->id != 1 ? '@叶落山城秋' : '' }} {{ $topic->user->weibo_name ? '@'.$topic->user->weibo_name : '' }}',
             wechatQrcodeTitle   : "微信扫一扫：分享", // 微信二维码提示文字
             wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
             sites               : ['weibo','wechat',  'facebook', 'twitter', 'google','qzone', 'qq', 'douban'],

@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use EstGroupe\Taggable\Model\Tag;
 use Phphub\Core\CreatorListener;
 use App\Models\Topic;
 use App\Models\SiteStatus;
@@ -57,7 +58,7 @@ class TopicsController extends Controller implements CreatorListener
         $topic = Topic::where('id', $id)->with('user', 'lastReplyUser')->firstOrFail();
 
         if ($topic->user->is_banned == 'yes') {
-            Flash::error('你访问的文章已被屏蔽，有疑问请发邮件：all@estgroupe.com');
+            Flash::error('你访问的文章已被屏蔽，有疑问请发邮件：g9zz@g9zz.com');
             return redirect(route('topics.index'));
         }
 
@@ -66,7 +67,7 @@ class TopicsController extends Controller implements CreatorListener
             && $topic->id == config('app.admin_board_cid')
             && (!Auth::check() || !Auth::user()->can('access_board'))
         ) {
-            Flash::error('您没有权限访问该文章，有疑问请发邮件：all@estgroupe.com');
+            Flash::error('您没有权限访问该文章，有疑问请发邮件：g9zz@g9zz.com');
             return redirect(route('topics.index'));
         }
 
